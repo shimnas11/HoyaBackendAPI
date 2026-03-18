@@ -1,0 +1,615 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{63D5A598-B84E-4F29-B402-4206D90851B8}|Hoya.Inventory.API\\Hoya.Inventory.API.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{63D5A598-B84E-4F29-B402-4206D90851B8}|Hoya.Inventory.API\\Hoya.Inventory.API.csproj|solutionrelative:hoya.inventory.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.domain\\entities\\exhibition\\exhibition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|solutionrelative:hoya.inventory.domain\\entities\\exhibition\\exhibition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{145ACC0E-5B80-4266-8E2D-18DFFF607277}|Hoya.Inventory.Infrastructure\\Hoya.Inventory.Infrastructure.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.infrastructure\\repository\\invoicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{145ACC0E-5B80-4266-8E2D-18DFFF607277}|Hoya.Inventory.Infrastructure\\Hoya.Inventory.Infrastructure.csproj|solutionrelative:hoya.inventory.infrastructure\\repository\\invoicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\businesslogic\\invoice\\getinvoicequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\businesslogic\\invoice\\getinvoicequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.domain\\dto\\invoicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|solutionrelative:hoya.inventory.domain\\dto\\invoicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.domain\\entities\\invoice\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|solutionrelative:hoya.inventory.domain\\entities\\invoice\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.domain\\common\\commonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|solutionrelative:hoya.inventory.domain\\common\\commonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{145ACC0E-5B80-4266-8E2D-18DFFF607277}|Hoya.Inventory.Infrastructure\\Hoya.Inventory.Infrastructure.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.infrastructure\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{145ACC0E-5B80-4266-8E2D-18DFFF607277}|Hoya.Inventory.Infrastructure\\Hoya.Inventory.Infrastructure.csproj|solutionrelative:hoya.inventory.infrastructure\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\businesslogic\\products\\getproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\businesslogic\\products\\getproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\businesslogic\\products\\getproductquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\businesslogic\\products\\getproductquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\businesslogic\\products\\createproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\businesslogic\\products\\createproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.domain\\entities\\products\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|solutionrelative:hoya.inventory.domain\\entities\\products\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D5A598-B84E-4F29-B402-4206D90851B8}|Hoya.Inventory.API\\Hoya.Inventory.API.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.api\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63D5A598-B84E-4F29-B402-4206D90851B8}|Hoya.Inventory.API\\Hoya.Inventory.API.csproj|solutionrelative:hoya.inventory.api\\controllers\\invoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\dtos\\invoicerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\dtos\\invoicerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\businesslogic\\invoice\\invoicecreatecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\businesslogic\\invoice\\invoicecreatecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\businesslogic\\invoice\\invoicecreatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\businesslogic\\invoice\\invoicecreatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\mappings\\productmappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\mappings\\productmappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.domain\\interfaces\\iinvoicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|solutionrelative:hoya.inventory.domain\\interfaces\\iinvoicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\businesslogic\\invoice\\getinvoicequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\businesslogic\\invoice\\getinvoicequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\dtos\\invoiceproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\dtos\\invoiceproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.domain\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|solutionrelative:hoya.inventory.domain\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.domain\\entities\\invoice\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|solutionrelative:hoya.inventory.domain\\entities\\invoice\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D5A598-B84E-4F29-B402-4206D90851B8}|Hoya.Inventory.API\\Hoya.Inventory.API.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63D5A598-B84E-4F29-B402-4206D90851B8}|Hoya.Inventory.API\\Hoya.Inventory.API.csproj|solutionrelative:hoya.inventory.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\businesslogic\\products\\updateproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\businesslogic\\products\\updateproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D5A598-B84E-4F29-B402-4206D90851B8}|Hoya.Inventory.API\\Hoya.Inventory.API.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63D5A598-B84E-4F29-B402-4206D90851B8}|Hoya.Inventory.API\\Hoya.Inventory.API.csproj|solutionrelative:hoya.inventory.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.domain\\entities\\aggregateroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|solutionrelative:hoya.inventory.domain\\entities\\aggregateroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.domain\\entities\\products\\productsize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|solutionrelative:hoya.inventory.domain\\entities\\products\\productsize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D5A598-B84E-4F29-B402-4206D90851B8}|Hoya.Inventory.API\\Hoya.Inventory.API.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{63D5A598-B84E-4F29-B402-4206D90851B8}|Hoya.Inventory.API\\Hoya.Inventory.API.csproj|solutionrelative:hoya.inventory.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\businesslogic\\products\\createproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\businesslogic\\products\\createproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{145ACC0E-5B80-4266-8E2D-18DFFF607277}|Hoya.Inventory.Infrastructure\\Hoya.Inventory.Infrastructure.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.infrastructure\\mongo\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{145ACC0E-5B80-4266-8E2D-18DFFF607277}|Hoya.Inventory.Infrastructure\\Hoya.Inventory.Infrastructure.csproj|solutionrelative:hoya.inventory.infrastructure\\mongo\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.domain\\configurations\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|solutionrelative:hoya.inventory.domain\\configurations\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\dtos\\productrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\dtos\\productrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\businesslogic\\products\\updateproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\businesslogic\\products\\updateproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.application\\dtos\\productsizerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{912556B9-C80F-481E-A2D1-883EAA92DC79}|Hoya.Inventory.Application\\Hoya.Inventory.Application.csproj|solutionrelative:hoya.inventory.application\\dtos\\productsizerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.domain\\enums\\commonenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{077C42E9-9FE1-4B8C-972D-81DE0EEDC349}|Hoya.Inventory.Domain\\Hoya.Inventory.Domain.csproj|solutionrelative:hoya.inventory.domain\\enums\\commonenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D5A598-B84E-4F29-B402-4206D90851B8}|Hoya.Inventory.API\\Hoya.Inventory.API.csproj|c:\\users\\dell\\onedrive\\desktop\\hoyaclothingco\\backendapi\\hoyabackendapi\\hoyaclothingco\\hoya.inventory.api\\hoya.inventory.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{63D5A598-B84E-4F29-B402-4206D90851B8}|Hoya.Inventory.API\\Hoya.Inventory.API.csproj|solutionrelative:hoya.inventory.api\\hoya.inventory.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Hoya.Inventory.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.API\\appsettings.json",
+              "RelativeToolTip": "Hoya.Inventory.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-18T05:56:44.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Exhibition.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Entities\\Exhibition\\Exhibition.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Domain\\Entities\\Exhibition\\Exhibition.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Entities\\Exhibition\\Exhibition.cs",
+              "RelativeToolTip": "Hoya.Inventory.Domain\\Entities\\Exhibition\\Exhibition.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAiwAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T19:35:05.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CommonService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Common\\CommonService.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Domain\\Common\\CommonService.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Common\\CommonService.cs",
+              "RelativeToolTip": "Hoya.Inventory.Domain\\Common\\CommonService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T19:19:58.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Infrastructure\\Repository\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Infrastructure\\Repository\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Infrastructure\\Repository\\ProductRepository.cs",
+              "RelativeToolTip": "Hoya.Inventory.Infrastructure\\Repository\\ProductRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAnwB0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T19:24:02.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetInvoiceQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Invoice\\GetInvoiceQueryHandler.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\BusinessLogic\\Invoice\\GetInvoiceQueryHandler.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Invoice\\GetInvoiceQueryHandler.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\BusinessLogic\\Invoice\\GetInvoiceQueryHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T08:37:57.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Invoice.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Entities\\Invoice\\Invoice.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Domain\\Entities\\Invoice\\Invoice.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Entities\\Invoice\\Invoice.cs",
+              "RelativeToolTip": "Hoya.Inventory.Domain\\Entities\\Invoice\\Invoice.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAcwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T18:41:32.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InvoiceDTO.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\DTO\\InvoiceDTO.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Domain\\DTO\\InvoiceDTO.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\DTO\\InvoiceDTO.cs",
+              "RelativeToolTip": "Hoya.Inventory.Domain\\DTO\\InvoiceDTO.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAkwAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T10:55:48.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InvoiceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Infrastructure\\Repository\\InvoiceRepository.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Infrastructure\\Repository\\InvoiceRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Infrastructure\\Repository\\InvoiceRepository.cs",
+              "RelativeToolTip": "Hoya.Inventory.Infrastructure\\Repository\\InvoiceRepository.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAApwGYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T19:00:10.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateProductHandler.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Products\\CreateProductHandler.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\BusinessLogic\\Products\\CreateProductHandler.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Products\\CreateProductHandler.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\BusinessLogic\\Products\\CreateProductHandler.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T14:51:05.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetProductHandler.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Products\\GetProductHandler.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\BusinessLogic\\Products\\GetProductHandler.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Products\\GetProductHandler.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\BusinessLogic\\Products\\GetProductHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T18:35:36.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Entities\\Products\\Product.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Domain\\Entities\\Products\\Product.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Entities\\Products\\Product.cs",
+              "RelativeToolTip": "Hoya.Inventory.Domain\\Entities\\Products\\Product.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAYwA0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T19:41:00.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "InvoiceController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.API\\Controllers\\InvoiceController.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.API\\Controllers\\InvoiceController.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.API\\Controllers\\InvoiceController.cs",
+              "RelativeToolTip": "Hoya.Inventory.API\\Controllers\\InvoiceController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAcwCcAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T18:20:05.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetProductQuery.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Products\\GetProductQuery.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\BusinessLogic\\Products\\GetProductQuery.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Products\\GetProductQuery.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\BusinessLogic\\Products\\GetProductQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T19:45:40.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "InvoiceCreateCommand.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Invoice\\InvoiceCreateCommand.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\BusinessLogic\\Invoice\\InvoiceCreateCommand.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Invoice\\InvoiceCreateCommand.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\BusinessLogic\\Invoice\\InvoiceCreateCommand.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAASwBIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T18:30:11.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductMappingConfig.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\Mappings\\ProductMappingConfig.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\Mappings\\ProductMappingConfig.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\Mappings\\ProductMappingConfig.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\Mappings\\ProductMappingConfig.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAmwCgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T18:09:53.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "InvoiceRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\DTOs\\InvoiceRequestDto.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\DTOs\\InvoiceRequestDto.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\DTOs\\InvoiceRequestDto.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\DTOs\\InvoiceRequestDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvwwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T09:12:34.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "InvoiceCreateCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Invoice\\InvoiceCreateCommandHandler.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\BusinessLogic\\Invoice\\InvoiceCreateCommandHandler.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Invoice\\InvoiceCreateCommandHandler.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\BusinessLogic\\Invoice\\InvoiceCreateCommandHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwCUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T19:37:14.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IInvoiceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Interfaces\\IInvoiceRepository.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Domain\\Interfaces\\IInvoiceRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Interfaces\\IInvoiceRepository.cs",
+              "RelativeToolTip": "Hoya.Inventory.Domain\\Interfaces\\IInvoiceRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T19:46:09.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GetInvoiceQuery.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Invoice\\GetInvoiceQuery.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\BusinessLogic\\Invoice\\GetInvoiceQuery.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Invoice\\GetInvoiceQuery.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\BusinessLogic\\Invoice\\GetInvoiceQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T08:20:51.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "InvoiceProductDto.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\DTOs\\InvoiceProductDto.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\DTOs\\InvoiceProductDto.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\DTOs\\InvoiceProductDto.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\DTOs\\InvoiceProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T19:51:11.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Domain\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "Hoya.Inventory.Domain\\Interfaces\\IProductRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T18:02:05.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "InvoiceItem.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Entities\\Invoice\\InvoiceItem.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Domain\\Entities\\Invoice\\InvoiceItem.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Entities\\Invoice\\InvoiceItem.cs",
+              "RelativeToolTip": "Hoya.Inventory.Domain\\Entities\\Invoice\\InvoiceItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T19:41:33.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.API\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.API\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.API\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Hoya.Inventory.API\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAzwCEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T12:06:23.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.API\\Program.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.API\\Program.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.API\\Program.cs",
+              "RelativeToolTip": "Hoya.Inventory.API\\Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAowDMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T14:57:00.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UpdateProductHandler.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Products\\UpdateProductHandler.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\BusinessLogic\\Products\\UpdateProductHandler.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Products\\UpdateProductHandler.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\BusinessLogic\\Products\\UpdateProductHandler.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAWwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T17:58:13.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AggregateRoot.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Entities\\AggregateRoot.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Domain\\Entities\\AggregateRoot.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Entities\\AggregateRoot.cs",
+              "RelativeToolTip": "Hoya.Inventory.Domain\\Entities\\AggregateRoot.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T19:41:05.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ProductSize.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Entities\\Products\\ProductSize.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Domain\\Entities\\Products\\ProductSize.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Entities\\Products\\ProductSize.cs",
+              "RelativeToolTip": "Hoya.Inventory.Domain\\Entities\\Products\\ProductSize.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA9wB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T19:34:05.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Hoya.Inventory.API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Hoya.Inventory.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-10T19:53:18.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CreateProductCommand.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Products\\CreateProductCommand.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\BusinessLogic\\Products\\CreateProductCommand.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Products\\CreateProductCommand.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\BusinessLogic\\Products\\CreateProductCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T14:50:32.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "MongoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Infrastructure\\Mongo\\MongoDbContext.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Infrastructure\\Mongo\\MongoDbContext.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Infrastructure\\Mongo\\MongoDbContext.cs",
+              "RelativeToolTip": "Hoya.Inventory.Infrastructure\\Mongo\\MongoDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T19:08:56.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "MongoDbSettings.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Configurations\\MongoDbSettings.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Domain\\Configurations\\MongoDbSettings.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Configurations\\MongoDbSettings.cs",
+              "RelativeToolTip": "Hoya.Inventory.Domain\\Configurations\\MongoDbSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T19:03:33.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProductRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\DTOs\\ProductRequestDto.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\DTOs\\ProductRequestDto.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\DTOs\\ProductRequestDto.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\DTOs\\ProductRequestDto.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA3wBMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T17:54:17.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UpdateProductCommand.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Products\\UpdateProductCommand.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\BusinessLogic\\Products\\UpdateProductCommand.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\BusinessLogic\\Products\\UpdateProductCommand.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\BusinessLogic\\Products\\UpdateProductCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T18:22:03.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Hoya.Inventory.API.csproj",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.API\\Hoya.Inventory.API.csproj",
+              "RelativeDocumentMoniker": "Hoya.Inventory.API\\Hoya.Inventory.API.csproj",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.API\\Hoya.Inventory.API.csproj",
+              "RelativeToolTip": "Hoya.Inventory.API\\Hoya.Inventory.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-27T11:54:11.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CommonEnums.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Enums\\CommonEnums.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Domain\\Enums\\CommonEnums.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Domain\\Enums\\CommonEnums.cs",
+              "RelativeToolTip": "Hoya.Inventory.Domain\\Enums\\CommonEnums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T17:11:25.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ProductSizeRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\DTOs\\ProductSizeRequestDTO.cs",
+              "RelativeDocumentMoniker": "Hoya.Inventory.Application\\DTOs\\ProductSizeRequestDTO.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\HoyaClothingCo\\BackendAPI\\HoyaBackendAPI\\HoyaClothingCo\\Hoya.Inventory.Application\\DTOs\\ProductSizeRequestDTO.cs",
+              "RelativeToolTip": "Hoya.Inventory.Application\\DTOs\\ProductSizeRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T17:12:55.233Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

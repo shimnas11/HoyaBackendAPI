@@ -1,4 +1,5 @@
 ﻿
+using Hoya.Inventory.Application.BusinessLogic.Exhibitions;
 using Hoya.Inventory.Application.BusinessLogic.Invoice;
 using Hoya.Inventory.Application.BusinessLogic.Products;
 using Hoya.Inventory.Application.DTOs;
@@ -6,7 +7,7 @@ using Mapster;
 
 namespace Hoya.Inventory.Application.Mappings
 {
-    public class ProductMappingConfig : IRegister
+    public class MappingConfig : IRegister
     {
         public void Register(TypeAdapterConfig config)
         {
@@ -39,13 +40,25 @@ namespace Hoya.Inventory.Application.Mappings
                 .Map(dest => dest.quantity, src => src.Quantity);
 
             config.NewConfig<InvoiceRequestDto, InvoiceCreateCommand>()
-
+              .Map(dest => dest.discount, src => src.Discount)
               .Map(dest => dest.discount, src => src.Discount)
               .Map(dest => dest.paymentMode, src => src.PaymentMode)
               .Map(dest => dest.exhibitionId, src => src.ExhibitionId)
               .Map(dest => dest.netAmount, src => src.NetAmount)
               .Map(dest => dest.products, src => src.Products);
 
+
+            config.NewConfig<CreateExhibitionDto, CreateExhibitionCommand>()
+             .Map(dest => dest.name, src => src.Name)
+             .Map(dest => dest.runBy, src => src.RunBy)
+             .Map(dest => dest.startDate, src => src.StartDate)
+             .Map(dest => dest.endDate, src => src.EndDate)
+             .Map(dest => dest.bookingCost, src => src.BookingCost);
+
+            config.NewConfig<CreateExpenseDto, CreateExhibitionExpenseCommand>()
+             .Map(dest => dest.Name, src => src.Name)
+             .Map(dest => dest.ExhibitionId, src => src.ExhibitionId)
+             .Map(dest => dest.Cost, src => src.Cost);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Hoya.Inventory.Infrastructure.Repository
         public ProductRepository(MongoDbContext context, IOptions<MongoDbSettings> settings)
         {
             _collection = context.Database
-                .GetCollection<Product>(settings.Value.ProductCollection);
+                .GetCollection<Product>("Products");
         }
 
         public async Task AddAsync(Product product)
@@ -37,6 +37,12 @@ namespace Hoya.Inventory.Infrastructure.Repository
             return await _collection.Find(x => x.Id == id).FirstOrDefaultAsync();
         }
 
+        public async Task<bool> IsExist(string name, string code)
+        {
+            return await _collection
+                 .Find(x => x.Code.ToLower() == code.ToLower())
+                    .AnyAsync();
+        }
         public async Task UpdateAsync(Product product, string id)
         {
             var filter = Builders<Product>.Filter.Eq(x => x.Id, id);

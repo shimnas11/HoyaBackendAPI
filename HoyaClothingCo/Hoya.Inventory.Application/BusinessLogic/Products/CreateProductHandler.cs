@@ -1,6 +1,7 @@
 ﻿using Hoya.Inventory.Domain.Entities;
 using Hoya.Inventory.Domain.Interfaces;
 using MediatR;
+using ZstdSharp;
 
 namespace Hoya.Inventory.Application.BusinessLogic.Products
 {
@@ -15,6 +16,12 @@ namespace Hoya.Inventory.Application.BusinessLogic.Products
 
         public async Task<string> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
+
+            var isExist= await _repo.IsExist(request.name, request.code);
+            if(isExist)
+            {
+                throw new  Exception("Product with the same name or code already exists");
+            }   
             var sizes = new List<ProductSize>();
             
             foreach (var item in request.sizes)

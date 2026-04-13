@@ -12,5 +12,6 @@ namespace Hoya.Inventory.Domain.Configurations
         public string DatabaseName { get; set; }
         public string ProductCollection { get; set; }
         public string InvoiceCollection { get; set; }
+        public string UserCollection { get; set; }
     }
 }

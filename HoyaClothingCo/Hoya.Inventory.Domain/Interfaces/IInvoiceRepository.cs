@@ -15,5 +15,7 @@ namespace Hoya.Inventory.Domain.Interfaces
         Task AddAsync(Invoice invoice);
         Task<List<InvoiceDto>> GetAllAsync();
         Task<Invoice> GetInvoiceByIdAsync(string id);
+        Task<List<InvoiceDto>> GetAllAsync(string exhitbitionId);
+        Task ReturnItemsAsync(string invoiceId, ReturnOrderDTO returnOrder);
     }
 }

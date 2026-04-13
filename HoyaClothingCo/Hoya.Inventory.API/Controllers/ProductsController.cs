@@ -2,12 +2,14 @@
 using Hoya.Inventory.Application.DTOs;
 using Mapster;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hoya.Inventory.API.Controllers
 {
     [ApiController]
     [Route("api/Products")]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -35,14 +37,13 @@ namespace Hoya.Inventory.API.Controllers
             return Ok(result);
         }
 
-        [HttpPut]
-        public async Task<IActionResult> Update([FromBody] ProductUpdateRequestDto request)
+        [HttpPut("Update/{id}")]
+        public async Task<IActionResult> Update(string id,[FromBody] ProductUpdateRequestDto request)
         {
-
             var command = request.Adapt<UpdateProductCommand>();
-
-            var id = await _mediator.Send(command);
-            return Ok(id);
+            
+            var response = await _mediator.Send(command);
+            return Ok(response);
 
         }
     }

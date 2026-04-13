@@ -25,10 +25,10 @@ namespace Hoya.Inventory.Infrastructure.Repository
         {
             _context = context;
             _products = context.Database
-                .GetCollection<Product>(settings.Value.ProductCollection);
+                .GetCollection<Product>("Products");
 
             _invoices = context.Database
-              .GetCollection<Invoice>(settings.Value.InvoiceCollection);
+              .GetCollection<Invoice>("Invoices");
         }
 
         public async Task AddAsync(Invoice invoice)
@@ -81,31 +81,173 @@ namespace Hoya.Inventory.Infrastructure.Repository
             }
         }
 
-       
+
         public async Task<List<InvoiceDto>> GetAllAsync()
         {
             var invoices = await _invoices
                 .Find(x => x.IsActive && !x.IsDeleted)
                 .ToListAsync();
 
+
+
+            return await GetInvoiceDetails(invoices);
+        }
+
+        public async Task<List<InvoiceDto>> GetAllAsync(string exhitbitionId)
+        {
+            var invoices = await _invoices
+                .Find(x => x.IsActive && !x.IsDeleted && x.ExhibitionId == exhitbitionId)
+                .ToListAsync();
+            return await GetInvoiceDetails(invoices);
+        }
+
+        public Task<Invoice> GetInvoiceByIdAsync(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public async Task ReturnItemsAsync(string invoiceId, ReturnOrderDTO returnOrder)
+        {
+            using var session = await _context.Client.StartSessionAsync();
+            session.StartTransaction();
+
+            try
+            {
+                // 1. Get invoice
+                var invoice = await _invoices
+                    .Find(i => i.Id == invoiceId)
+                    .FirstOrDefaultAsync();
+
+                if (invoice == null)
+                    throw new Exception("Invoice not found");
+
+                // 2. Get product
+                var product = await _products
+                    .Find(p => p.Id == returnOrder.ProductId)
+                    .FirstOrDefaultAsync();
+
+                if (product == null)
+                    throw new Exception($"Product {returnOrder.ProductId} not found");
+
+                // 3. Validate size
+                var size = product.Sizes
+                    .FirstOrDefault(s => s.Size == returnOrder.ProductSize);
+
+                if (size == null)
+                    throw new Exception($"Size {returnOrder.ProductSize} not found in product {product.Name}");
+
+                // 4. Validate invoice item
+                var invoiceItem = invoice.Products
+                    .FirstOrDefault(p => p.ProductId == returnOrder.ProductId && p.Size == returnOrder.ProductSize);
+
+                if (invoiceItem == null)
+                    throw new Exception("Item not found in invoice");
+
+                if (returnOrder.Quantity <= 0)
+                    throw new Exception("Invalid return quantity");
+
+                if (returnOrder.Quantity > invoiceItem.Quantity)
+                    throw new Exception("Return quantity exceeds sold quantity");
+
+                // 🔥 Calculate return amount
+                decimal returnAmount = invoiceItem.Amount * returnOrder.Quantity;
+
+                // 5. Update stock (ADD back)
+                var productFilter = Builders<Product>.Filter.And(
+                    Builders<Product>.Filter.Eq(p => p.Id, returnOrder.ProductId),
+                    Builders<Product>.Filter.Eq("sizes.Size", returnOrder.ProductSize)
+                );
+
+                var productUpdate = Builders<Product>.Update
+                    .Inc("sizes.$.Quantity", returnOrder.Quantity);
+
+                await _products.UpdateOneAsync(session, productFilter, productUpdate);
+
+                // 6. Update invoice (REMOVE or REDUCE)
+                if (returnOrder.Quantity == invoiceItem.Quantity)
+                {
+                    // FULL RETURN → REMOVE item
+                    await _invoices.UpdateOneAsync(
+                        session,
+                        Builders<Invoice>.Filter.Eq(i => i.Id, invoiceId),
+                        Builders<Invoice>.Update.PullFilter(
+                            i => i.Products,
+                            p => p.ProductId == returnOrder.ProductId && p.Size == returnOrder.ProductSize
+                        )
+                    );
+                }
+                else
+                {
+                    // PARTIAL RETURN → REDUCE quantity
+                    await _invoices.UpdateOneAsync(
+                        session,
+                        Builders<Invoice>.Filter.And(
+                            Builders<Invoice>.Filter.Eq(i => i.Id, invoiceId),
+                            Builders<Invoice>.Filter.ElemMatch(i => i.Products,
+                                p => p.ProductId == returnOrder.ProductId && p.Size == returnOrder.ProductSize)
+                        ),
+                        Builders<Invoice>.Update.Inc("Products.$.Quantity", -returnOrder.Quantity)
+                    );
+                }
+
+                // 7. Update financials
+                var financialUpdate = Builders<Invoice>.Update
+                    .Inc(i => i.TotalAmount, -returnAmount)
+                    .Inc(i => i.NetAmount, -returnAmount);
+
+                await _invoices.UpdateOneAsync(
+                    session,
+                    Builders<Invoice>.Filter.Eq(i => i.Id, invoiceId),
+                    financialUpdate
+                );
+
+              
+                // 9. Update status
+                var updatedInvoice = await _invoices
+                    .Find(i => i.Id == invoiceId)
+                    .FirstOrDefaultAsync();
+
+                string status = (updatedInvoice.Products == null || !updatedInvoice.Products.Any())
+                    ? "FullyReturned"
+                    : "PartiallyReturned";
+
+                await _invoices.UpdateOneAsync(
+                    session,
+                    Builders<Invoice>.Filter.Eq(i => i.Id, invoiceId),
+                    Builders<Invoice>.Update.Set(i => i.Status, status)
+                );
+
+                await session.CommitTransactionAsync();
+            }
+            catch
+            {
+                await session.AbortTransactionAsync();
+                throw;
+            }
+        }
+        private async Task<List<InvoiceDto>> GetInvoiceDetails(List<Invoice> invoices)
+        {
             var productIds = invoices
-                .SelectMany(i => i.Products)
-                .Select(p => p.ProductId)
-                .Distinct()
-                .ToList();
+              .SelectMany(i => i.Products)
+              .Select(p => p.ProductId)
+              .Distinct()
+              .ToList();
 
             var products = await _products
                 .Find(p => productIds.Contains(p.Id))
                 .ToListAsync();
 
-            var result = invoices.Select(invoice => new InvoiceDto
+            var result= invoices.Select(invoice => new InvoiceDto
             {
                 InvoiceNumber = invoice.ReferenceId,
-                TotalAmount=invoice.TotalAmount,
+                Id = invoice.Id,
+                TotalAmount = invoice.TotalAmount,
                 DiscountAmount = invoice.Discount,
                 PaymentMode = invoice.PaymentMode,
-                ExhibitionId=invoice.ExhibitionId,
-                InvoiceDate =invoice.CreatedAt,
+                ExhibitionId = invoice.ExhibitionId,
+                InvoiceDate = invoice.CreatedAt,
+                Status = invoice.Status,
                 Items = invoice.Products.Select(p =>
                 {
                     var product = products.FirstOrDefault(x => x.Id == p.ProductId);
@@ -116,17 +258,14 @@ namespace Hoya.Inventory.Infrastructure.Repository
                         ProductName = product.Name,
                         Price = product.SellingPrice,
                         Size = p.Size,
-                        Color=product.Color,
+                        Color = product.Color,
                         Quantity = p.Quantity
                     };
                 }).ToList()
             }).ToList();
-
+            
             return result;
-        }
-        public Task<Invoice> GetInvoiceByIdAsync(string id)
-        {
-            throw new NotImplementedException();
+
         }
     }
 }

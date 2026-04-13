@@ -35,6 +35,7 @@ namespace Hoya.Inventory.Domain.Entities
         public string PaymentMode { get; private set; }
         public string? ExhibitionId { get; private set; }
         public string ReferenceId { get; private set; }
+        public string Status { get; private set; }
 
 
         public void AddInvoiceItems(List<InvoiceItem> items)
@@ -46,6 +47,7 @@ namespace Hoya.Inventory.Domain.Entities
 
             TotalItems = Products.Sum(s => s.Quantity);
             TotalAmount = Products.Sum(s => s.Amount);
+            Status = "Created";
         }
 
         public void AddDiscount(decimal discount)

@@ -8,7 +8,7 @@ namespace Hoya.Inventory.Domain.DTO
 {
     public class InvoiceDto
     {
-
+        public string Id { get; set; }
         public string InvoiceNumber { get; set; }
 
         public DateTime InvoiceDate { get; set; }
@@ -17,6 +17,7 @@ namespace Hoya.Inventory.Domain.DTO
         public decimal DiscountAmount { get; set; }
         public string PaymentMode { get; set; }
         public string? ExhibitionId { get; set; }
+        public string Status { get; set; }
 
         public List<InvoiceItemDto> Items { get; set; } = new();
     }
@@ -35,5 +36,12 @@ namespace Hoya.Inventory.Domain.DTO
 
         public decimal Price { get; set; }
 
+    }
+
+    public class ReturnOrderDTO
+    {
+            public int Quantity { get; set; }
+            public string ProductId { get; set; }
+            public string ProductSize{ get; set; }
     }
 }

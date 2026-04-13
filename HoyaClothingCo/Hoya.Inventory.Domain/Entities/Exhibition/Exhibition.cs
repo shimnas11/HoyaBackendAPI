@@ -8,6 +8,14 @@ namespace Hoya.Inventory.Domain.Entities.Exhibition
 {
     public class Exhibition : AggregateRoot
     {
+        public Exhibition(string userId)
+          : base(userId)
+        {
+            Id = Guid.NewGuid().ToString();
+        }
+
+        protected Exhibition() : base() { }
+
         public string Name { get; set; }
         public string Place { get; set; }
         public string RunBy { get; set; }
@@ -21,17 +29,47 @@ namespace Hoya.Inventory.Domain.Entities.Exhibition
         public decimal Loss { get; set; }
 
         public List<ExhibitionExpense> Expenses { get; set; }
-        public List<Invoice> Invoices { get; set; }
-    }
+        //public List<Invoice> Invoices { get; set; }
 
-    public class ExhibitionExpense
-    {
-        public string ExhibitionId { get; set; }
-        public Exhibition Exhibition { get; set; }
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public decimal Cost { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public void SetExhibitionDetails(string name, string place, string runBy, DateTime startDate, DateTime endDate, decimal bookingCost)
+        {
+            Name = name;
+            Place = place;
+            RunBy = runBy;
+            StartDate = startDate;
+            EndDate = endDate;
+            NumberOfDays = (EndDate - StartDate).Days + 1;
+            BookingCost = bookingCost;
+        }
+
+
+
+        public void AddExpenses(ExhibitionExpense item)
+        {
+            if (Expenses == null)
+            {
+                Expenses = new List<ExhibitionExpense>();
+            }
+
+
+            Expenses.Add(new ExhibitionExpense(item.ExhibitionId, item.Name, item.Cost));
+        }
+
+        public void SetNetAmount()
+        {
+            TotalExpense = Expenses.Sum(s => s.Cost);
+            NetAmount = TotalExpense + BookingCost;
+        }
+
+        public void SetProfit(decimal profit)
+        {
+            Profit = profit;
+        }
+
+        public void SetLoss(decimal loss)
+        {
+            Loss = loss;
+        }
 
     }
 }

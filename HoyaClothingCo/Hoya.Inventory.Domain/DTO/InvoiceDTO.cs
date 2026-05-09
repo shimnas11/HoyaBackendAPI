@@ -44,4 +44,13 @@ namespace Hoya.Inventory.Domain.DTO
             public string ProductId { get; set; }
             public string ProductSize{ get; set; }
     }
+
+    public class DashboardDTO
+    {
+        public int TotalProducts { get; set; }
+        public int TotalSold { get; set; }
+        public decimal Revenue { get; set; }
+        public decimal Profit { get; set; }
+        public decimal TotalExpense { get; set; }
+    }
 }

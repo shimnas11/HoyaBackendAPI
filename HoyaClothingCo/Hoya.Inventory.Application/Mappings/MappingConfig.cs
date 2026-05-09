@@ -59,6 +59,10 @@ namespace Hoya.Inventory.Application.Mappings
              .Map(dest => dest.Name, src => src.Name)
              .Map(dest => dest.ExhibitionId, src => src.ExhibitionId)
              .Map(dest => dest.Cost, src => src.Cost);
+
+            config.NewConfig<RefundDto, CreateRefundCommand>()
+             .Map(dest => dest.ExhibitionId, src => src.ExhibitionId)
+             .Map(dest => dest.Amount, src => src.Amount);
         }
     }
 }

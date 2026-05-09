@@ -187,7 +187,7 @@ namespace Hoya.Inventory.Infrastructure.Repository
                             Builders<Invoice>.Filter.ElemMatch(i => i.Products,
                                 p => p.ProductId == returnOrder.ProductId && p.Size == returnOrder.ProductSize)
                         ),
-                        Builders<Invoice>.Update.Inc("Products.$.Quantity", -returnOrder.Quantity)
+                        Builders<Invoice>.Update.Inc("Products.$.Quantity", +returnOrder.Quantity)
                     );
                 }
 
@@ -202,7 +202,7 @@ namespace Hoya.Inventory.Infrastructure.Repository
                     financialUpdate
                 );
 
-              
+
                 // 9. Update status
                 var updatedInvoice = await _invoices
                     .Find(i => i.Id == invoiceId)
@@ -212,10 +212,19 @@ namespace Hoya.Inventory.Infrastructure.Repository
                     ? "FullyReturned"
                     : "PartiallyReturned";
 
+                decimal discountAmount = updatedInvoice.Products?.Count < 2 ? 0 : updatedInvoice.Discount;
+
+                var update = Builders<Invoice>.Update.Combine(
+                  Builders<Invoice>.Update.Set(i => i.Status, status),
+                  Builders<Invoice>.Update.Set(i => i.Discount, discountAmount)
+                     );
+
                 await _invoices.UpdateOneAsync(
                     session,
+
+
                     Builders<Invoice>.Filter.Eq(i => i.Id, invoiceId),
-                    Builders<Invoice>.Update.Set(i => i.Status, status)
+                    update
                 );
 
                 await session.CommitTransactionAsync();
@@ -238,7 +247,7 @@ namespace Hoya.Inventory.Infrastructure.Repository
                 .Find(p => productIds.Contains(p.Id))
                 .ToListAsync();
 
-            var result= invoices.Select(invoice => new InvoiceDto
+            var result = invoices.Select(invoice => new InvoiceDto
             {
                 InvoiceNumber = invoice.ReferenceId,
                 Id = invoice.Id,
@@ -263,7 +272,7 @@ namespace Hoya.Inventory.Infrastructure.Repository
                     };
                 }).ToList()
             }).ToList();
-            
+
             return result;
 
         }

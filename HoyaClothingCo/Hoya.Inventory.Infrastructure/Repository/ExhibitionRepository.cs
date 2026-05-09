@@ -136,27 +136,38 @@ namespace Hoya.Inventory.Infrastructure.Repository
                                 .ToList();
                 var productDetails = await _products.Aggregate().Match(x => productids
                                     .Any(c => c == x.Id)).ToListAsync();
-               
 
+
+                overview.TotalItemSelled = 0;
                 foreach (var invoice in invoices)
                 {
                     overview.NetAmount += invoice.NetAmount;
-                    overview.TotalDiscount += invoice.Discount;
+                    if (invoice.Discount > 0)
+                    {
+                        overview.TotalDiscount += invoice.Discount;
+                    }
+                    else
+                    {
+                        overview.Additional += invoice.Discount;
+                    }
                     overview.TotalSales += invoice.TotalAmount;
                     decimal itemPurchasedSum = 0;
 
                     foreach (var product in invoice.Products)
                     {
-                        var pr= productDetails.Find(x=>x.Id==product.ProductId);
+                        var pr = productDetails.Find(x => x.Id == product.ProductId);
                         if (pr != null)
                         {
+                            overview.TotalItemSelled++;
                             itemPurchasedSum += pr.Cost;
                         }
                     }
-                    overview.Profit +=( invoice.TotalAmount - itemPurchasedSum);
+                    overview.Profit += (invoice.NetAmount - itemPurchasedSum);
                 }
 
 
+
+                overview.Profit = overview.Profit - (exhibition.BookingCost +exhibition.TotalExpense) ;
 
             }
             return overview;

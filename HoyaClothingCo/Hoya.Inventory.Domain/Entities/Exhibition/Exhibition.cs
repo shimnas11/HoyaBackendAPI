@@ -40,6 +40,7 @@ namespace Hoya.Inventory.Domain.Entities.Exhibition
             EndDate = endDate;
             NumberOfDays = (EndDate - StartDate).Days + 1;
             BookingCost = bookingCost;
+            NetAmount = bookingCost;
         }
 
 
@@ -59,6 +60,15 @@ namespace Hoya.Inventory.Domain.Entities.Exhibition
         {
             TotalExpense = Expenses.Sum(s => s.Cost);
             NetAmount = TotalExpense + BookingCost;
+        }
+
+        public void Refund(decimal amount)
+        {
+            if (amount <= 0)
+                throw new ArgumentException("Refund amount must be greater than zero.");
+            BookingCost -= amount;
+            NetAmount -= amount;
+
         }
 
         public void SetProfit(decimal profit)

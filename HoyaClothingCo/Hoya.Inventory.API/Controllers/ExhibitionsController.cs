@@ -61,5 +61,16 @@ namespace Hoya.Inventory.API.Controllers
         {
             return Ok(await _mediator.Send(new GetExhibitionOverviewQuery(id)));
         }
+
+
+        [HttpPost("Refund")]
+        public async Task<IActionResult> Refund([FromBody] RefundDto refund )
+        {
+            var command = refund.Adapt<CreateRefundCommand>();
+
+            return Ok(await _mediator.Send(command));
+        }
+
+
     }
 }

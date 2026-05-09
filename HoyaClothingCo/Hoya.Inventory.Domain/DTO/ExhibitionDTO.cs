@@ -44,7 +44,9 @@ namespace Hoya.Inventory.Domain.DTO
         public decimal TotalSales { get; set; }
         public decimal TotalDiscount { get; set; }
         public decimal NetAmount { get; set; }
+        public decimal Additional { get; set; }
         public decimal Profit { get; set; }
+        public int TotalItemSelled { get; set; }
     }
 
 }

@@ -13,4 +13,14 @@ namespace Hoya.Inventory.Application.DTOs
         [Required]
         public decimal Cost { get; set; }
     }
+
+
+    public class RefundDto
+    {
+      
+        [Required]
+        public string ExhibitionId { get; set; }
+        [Required]
+        public decimal Amount { get; set; }
+    }
 }

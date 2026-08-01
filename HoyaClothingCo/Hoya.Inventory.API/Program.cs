@@ -7,8 +7,10 @@ using Hoya.Inventory.Application.Mappings;
 using Hoya.Inventory.Application.Services;
 using Hoya.Inventory.Domain.Configurations;
 using Hoya.Inventory.Domain.Interfaces;
+using Hoya.Inventory.Domain.Interfaces.Masters;
 using Hoya.Inventory.Infrastructure.Mongo;
 using Hoya.Inventory.Infrastructure.Repository;
+using Hoya.Inventory.Infrastructure.Repository.Masters;
 using Mapster;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -55,6 +57,7 @@ builder.Services.AddScoped<IInvoiceRepository, InvoiceRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IExhibitionRepository, ExhibitionRepository>();
 builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 
 builder.Services.AddAuthentication(options =>
@@ -82,6 +85,10 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddAuthorization();
 //builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 var app = builder.Build();
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
@@ -89,6 +96,7 @@ app.UseRouting();
 app.UseCors("hoyaApp");
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

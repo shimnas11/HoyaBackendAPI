@@ -29,13 +29,22 @@ namespace Hoya.Inventory.Application.BusinessLogic.Products
             {
                 sizes.Add(new Domain.Entities.ProductSize(item.size, item.quantity));
             }
+            if (product.Sizes?.Count > 0)
+            {
+                var ids = sizes.Select(x => x.Size).ToList();
+
+               var productsToDelete = product.Sizes.ToList().Where(x => !ids.Contains(x.Size)).ToList();
+                foreach (var item in productsToDelete)
+                {
+                    product.RemoveSize(item.Size);
+                }
+            }
 
             // 3️⃣ Update product fields
             product.UpdateDetails(request.name, request.code,request.color, request.cost, request.sellingPrice);
 
             // 4️⃣ Update sizes / quantity
             product.UpdateSizes(sizes);
-
             // 5️⃣ Save changes
             await _repo.UpdateAsync(product, request.Id);
 

@@ -4,4 +4,14 @@
     {
         public string Id { get; set; }
     }
+    public class CategoryCreateDTO 
+    {
+        public string Name { get; set; }
+    }
+
+    public class MaterialTypeCreateDTO
+    {
+        public string Name { get; set; }
+    }
+
 }

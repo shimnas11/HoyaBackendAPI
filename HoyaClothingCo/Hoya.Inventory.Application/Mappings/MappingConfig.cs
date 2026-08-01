@@ -1,6 +1,7 @@
 ﻿
 using Hoya.Inventory.Application.BusinessLogic.Exhibitions;
 using Hoya.Inventory.Application.BusinessLogic.Invoice;
+using Hoya.Inventory.Application.BusinessLogic.Masters;
 using Hoya.Inventory.Application.BusinessLogic.Products;
 using Hoya.Inventory.Application.DTOs;
 using Mapster;
@@ -63,6 +64,11 @@ namespace Hoya.Inventory.Application.Mappings
             config.NewConfig<RefundDto, CreateRefundCommand>()
              .Map(dest => dest.ExhibitionId, src => src.ExhibitionId)
              .Map(dest => dest.Amount, src => src.Amount);
+
+            config.NewConfig<CategoryCreateDTO, CreateCategoryCommand>()
+            .Map(dest => dest.name, src => src.Name);
+
+            
         }
     }
 }

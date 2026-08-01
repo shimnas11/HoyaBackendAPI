@@ -41,6 +41,7 @@ namespace Hoya.Inventory.Domain.DTO
     public class ExhibitionOverviewDTO
     {
         public string ExhibitionId { get; set; }
+        public string Name { get; set; }
         public decimal TotalSales { get; set; }
         public decimal TotalDiscount { get; set; }
         public decimal NetAmount { get; set; }

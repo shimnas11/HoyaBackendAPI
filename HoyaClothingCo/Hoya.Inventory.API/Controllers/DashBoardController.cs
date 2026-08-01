@@ -28,5 +28,20 @@ namespace Hoya.Inventory.API.Controllers
             // Implement exhibition creation logic here
             return Ok(await _mediator.Send(new GetDashboardOverviewQuery()));
         }
+
+        
+        [HttpGet("hotSellingProducts")]
+        public async Task<IActionResult> GetHotSellingProducts()
+        {
+            // Implement exhibition creation logic here
+            return Ok(await _mediator.Send(new GetHotSellingProductQuery()));
+        }
+
+        [HttpGet("getExhibitionOverview")]
+        public async Task<IActionResult> getExhibitionOverview()
+        {
+            // Implement exhibition creation logic here
+            return Ok(await _mediator.Send(new GetExhibitionOverviewQuery()));
+        }
     }
 }

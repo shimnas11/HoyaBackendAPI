@@ -53,4 +53,10 @@ namespace Hoya.Inventory.Domain.DTO
         public decimal Profit { get; set; }
         public decimal TotalExpense { get; set; }
     }
+    public class HotSellingProductDTO
+    {
+        public string ProductName { get; set; }
+        public string Code { get; set; }
+        public decimal Revenue { get; set; }
+    }
 }

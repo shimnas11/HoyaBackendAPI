@@ -10,5 +10,7 @@ namespace Hoya.Inventory.Domain.Interfaces
     public interface IDashboardRepository
     {
         Task<DashboardDTO> GetDashboardOverviewAsync();
+        Task<List<HotSellingProductDTO>> GetHotSellingProductsAsync();
+        public Task<List<ExhibitionOverviewDTO>> GetExhibitionOverviewAsync();
     }
 }

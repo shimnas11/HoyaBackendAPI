@@ -3,5 +3,6 @@ using MediatR;
 
 namespace Hoya.Inventory.Application.BusinessLogic.Products
 {
-    public record GetProductQuery() : IRequest<List<Product>>;
+    public record GetProductByIdQuery(string id) : IRequest<Product>;
+
 }

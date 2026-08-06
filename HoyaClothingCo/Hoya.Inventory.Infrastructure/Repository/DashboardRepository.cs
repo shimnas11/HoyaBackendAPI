@@ -3,6 +3,7 @@ using System.Linq;
 using Hoya.Inventory.Domain.DTO;
 using Hoya.Inventory.Domain.Entities;
 using Hoya.Inventory.Domain.Entities.Exhibition;
+using Hoya.Inventory.Domain.Entities.Misc;
 using Hoya.Inventory.Domain.Interfaces;
 using Hoya.Inventory.Infrastructure.Mongo;
 using MongoDB.Driver;
@@ -14,19 +15,24 @@ namespace Hoya.Inventory.Infrastructure.Repository
         private readonly IProductRepository _productRepo;
         private readonly IInvoiceRepository _invoiceRepo;
         private readonly IExhibitionRepository _exhibitionRepo;
+        private readonly IDamagedProductRepository _damageRepo;
         private readonly IMongoCollection<Invoice> _invoices;
         private readonly IMongoCollection<Product> _products;
+        private readonly IMongoCollection<DamagedProduct> _damageProducts;
         private readonly MongoDbContext _context;
-        public DashboardRepository(MongoDbContext context, IProductRepository productRepo, IInvoiceRepository invoiceRepo, IExhibitionRepository exhibitionRepo)
+        public DashboardRepository(MongoDbContext context, IDamagedProductRepository damageRepo,IProductRepository productRepo, IInvoiceRepository invoiceRepo, IExhibitionRepository exhibitionRepo)
         {
             _productRepo = productRepo;
             _invoiceRepo = invoiceRepo;
             _exhibitionRepo = exhibitionRepo;
+            _damageRepo = damageRepo;
             _invoices = context.Database
               .GetCollection<Invoice>("Invoices");
 
             _products = context.Database
               .GetCollection<Product>("Products");
+            _damageProducts = context.Database
+              .GetCollection<DamagedProduct>("DamagedProducts");
         }
 
         public async Task<DashboardDTO> GetDashboardOverviewAsync()
@@ -34,14 +40,19 @@ namespace Hoya.Inventory.Infrastructure.Repository
             var products = await _productRepo.GetAllAsync();
             var invoices = await _invoiceRepo.GetAllAsync();
             var exhibitions = await _exhibitionRepo.GetAll();
+            var damageProducts = await _damageRepo.GetAllAsync();
             var response = new DashboardDTO()
             {
                 TotalProducts = 0,
                 TotalSold = 0,
                 Profit = 0,
                 Revenue = 0,
-                TotalExpense = 0
+                TotalExpense = 0,
+                DamageCount=0,
+                TotalDamage = 0
             };
+            response.TotalDamage = damageProducts.Sum(damage => damage.Quantity * damage.BuyingPrice);
+            response.DamageCount = damageProducts.Sum(damage => damage.Quantity );
             products.ForEach(product =>
                    {
                        response.TotalProducts += product.Sizes.Sum(size => size.Quantity);

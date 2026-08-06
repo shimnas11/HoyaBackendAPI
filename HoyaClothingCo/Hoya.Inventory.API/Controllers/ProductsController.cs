@@ -37,6 +37,13 @@ namespace Hoya.Inventory.API.Controllers
             return Ok(result);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(string id)
+        {
+            var result = await _mediator.Send(new GetProductByIdQuery(id));
+            return Ok(result);
+        }
+
         [HttpPut("Update/{id}")]
         public async Task<IActionResult> Update(string id,[FromBody] ProductUpdateRequestDto request)
         {

@@ -2,6 +2,7 @@
 using Hoya.Inventory.Application.BusinessLogic.Exhibitions;
 using Hoya.Inventory.Application.BusinessLogic.Invoice;
 using Hoya.Inventory.Application.BusinessLogic.Masters;
+using Hoya.Inventory.Application.BusinessLogic.Misc;
 using Hoya.Inventory.Application.BusinessLogic.Products;
 using Hoya.Inventory.Application.DTOs;
 using Mapster;
@@ -68,7 +69,15 @@ namespace Hoya.Inventory.Application.Mappings
             config.NewConfig<CategoryCreateDTO, CreateCategoryCommand>()
             .Map(dest => dest.name, src => src.Name);
 
-            
+            config.NewConfig< CreateDamageDto, MarkProductDamagedCommand>()
+            .Map(dest => dest.ProductId, src => src.ProductId)
+            .Map(dest => dest.Size, src => src.Size)
+            .Map(dest => dest.Quantity, src => src.Quantity)
+            .Map(dest => dest.Reason, src => src.Reason)
+            .Map(dest => dest.Remarks, src => src.Remarks)
+            .Map(dest => dest.adjustmentType, src => src.AdjustmentType);
+
+
         }
     }
 }
